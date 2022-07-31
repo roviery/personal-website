@@ -3,9 +3,9 @@ import React from "react";
 class About extends React.Component {
     render() {
         return (
-            <div className="container mx-auto pt-5 my-40" id="about">
+            <div className="container mx-auto p-4" id="about">
                 <div className="flex flex-col lg:flex-row-reverse justify-around items-center">
-                    <div className="h-44 md:h-64 my-10 lg:my-0">
+                    <div className="h-44 my-10 md:h-64 lg:my-0">
                         <img
                             className="h-full rounded-full"
                             src={process.env.PUBLIC_URL + "/me.jpg"}
@@ -14,9 +14,9 @@ class About extends React.Component {
                     </div>
                     <a
                         className="border border-slate-800 leading-relaxed rounded-xl cursor-pointer 
-                                w-2/3 p-10 duration-300 hover:bg-slate-800 
+                                p-4 duration-300 hover:bg-slate-800 lg:w-2/3 lg:p-8
                                 hover:text-white hover:duration-300"
-                        href="https://drive.google.com/file/d/1LQDZnlhsc2f4jcLGePUildUt-pVYv0wo/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1e59bUarXG5DUzW5122f5Nzpq4ozj6G2w/view?usp=sharing"
                         target="_blank"
                         rel="noreferrer"
                     >

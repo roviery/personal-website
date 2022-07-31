@@ -6,9 +6,9 @@ import { FaNodeJs } from "react-icons/fa"
 class Project extends React.Component {
     render() {
         return (
-            <div className="container mx-auto my-40">
+            <div className="container p-4 mx-auto my-40">
                 <h2 className="text-center m-5">My Projects</h2>
-                <div className='grid grid-cols-2'>
+                <div className='grid grid-cols-1 md:grid-cols-2'>
                     <Box
                         type='Android App'
                         title='Catetin'
