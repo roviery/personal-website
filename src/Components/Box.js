@@ -1,24 +1,25 @@
-import React from "react";
+import { Link } from "react-router-dom"
 
-class Box extends React.Component {
-    render() {
-        return (
-            <a
-                className="relative border border-slate-800 rounded cursor-pointer p-6 
+function Box(props) {
+    return (
+        <Link
+            className="relative border border-slate-800 rounded cursor-pointer p-6 
                         duration-300 hover:bg-slate-800 hover:text-white 
                         hover:duration-300"
-                href={this.props.link}
-                target="_blank"
-                rel="noreferrer"
-            >
-                <h3 className="font-medium">{this.props.type}</h3>
-                <h2 className="text-3xl my-4">{this.props.title}</h2>
-                <p className="mb-12">{this.props.desc}</p>
-                {this.props.icon}
-                <p className="absolute bottom-4 right-4">Detail &rarr; </p>
-            </a>
-        )
-    }
+            to='/project'
+            state={{
+                projectName: props.title,
+                type: props.type,
+                desc: props.desc,
+            }}
+        >
+            <h3 className="font-medium">{props.type}</h3>
+            <h2 className="text-3xl my-4">{props.title}</h2>
+            <p className="mb-12">{props.desc}</p>
+            {props.icon}
+            <p className="absolute bottom-4 right-4">Detail &rarr; </p>
+        </Link>
+    )
 }
 
 export default Box
