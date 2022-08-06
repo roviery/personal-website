@@ -1,10 +1,10 @@
-import About from '../Section/About'
-import Introduction from '../Section/Introduction'
-import Project from '../Section/Project'
+import About from '../section/About'
+import Introduction from '../section/Introduction'
+import Project from '../section/Project'
 
 function Home(props) {
     return (
-        <div className='font-poppins text-slate-800'>
+        <div className='text-slate-800'>
             <Introduction />
             <About />
             <Project />

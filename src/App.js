@@ -1,8 +1,8 @@
 import './index.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Home from './Pages/Home';
-import ProjectDetail from './Pages/ProjectDetail'
-import ScrollToTop from './Utils/ScrollToTop';
+import Home from './pages/Home';
+import ProjectDetail from './pages/ProjectDetail'
+import ScrollToTop from './utils/ScrollToTop';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" exact element={<Home />} />
-        <Route path="/project" exact element={<ProjectDetail />} />
+        <Route path="/project/:id" exact element={<ProjectDetail />} />
       </Routes>
     </Router>
   );

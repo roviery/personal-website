@@ -1,18 +1,53 @@
-import { useLocation } from 'react-router-dom'
-import ProjectIntro from '../Section/ProjectIntro'
+import { useParams } from "react-router-dom"
+import React, { useEffect, useState } from "react"
+import { FetchProject } from "../data/Fetch";
+import ProjectIntro from "../section/ProjectIntro";
+import ProjectDesc from "../section/ProjectDesc";
+import ProjectTech from "../section/ProjectTech";
 
 function ProjectDetail(props) {
-    const location = useLocation()
-    const { projectName, type, desc } = location.state
-    return (
-        <div className='font-poppins text-slate-800'>
-            <ProjectIntro
-                projectName={projectName}
-                type={type}
-                desc={desc}
-            />
-        </div>
-    )
+    const { id } = useParams()
+
+    const [error, setError] = useState(null);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [project, setProject] = useState([]);
+
+    useEffect(() => {
+        FetchProject(id).then(
+            (data) => {
+                setProject(data.result)
+                setIsLoaded(true)
+            },
+            (error) => {
+                setIsLoaded(true)
+                setError(error)
+            }
+        )
+    }, [id])
+
+    if (error) {
+        return <div>Error: {error.message}</div>
+    }
+    if (!isLoaded) {
+        return (
+            <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 text-slate-800">
+                <h2>Loading...</h2>
+            </div>
+        )
+    }
+    if (project) {
+        return (
+            <div className="text-slate-800">
+                <ProjectIntro
+                    type={project.type}
+                    name={project.name}
+                    headline={project.headline}
+                />
+                <ProjectDesc />
+                <ProjectTech />
+            </div>
+        )
+    }
 }
 
 export default ProjectDetail

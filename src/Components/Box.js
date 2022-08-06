@@ -6,7 +6,7 @@ function Box(props) {
             className="relative border border-slate-800 rounded cursor-pointer p-6 
                         duration-300 hover:bg-slate-800 hover:text-white 
                         hover:duration-300"
-            to='/project'
+            to={`/project/${props.id}`}
             state={{
                 projectName: props.title,
                 type: props.type,
