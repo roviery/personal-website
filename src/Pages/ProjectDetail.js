@@ -4,6 +4,7 @@ import { FetchProject } from "../data/Fetch";
 import ProjectIntro from "../section/ProjectIntro";
 import ProjectDesc from "../section/ProjectDesc";
 import ProjectTech from "../section/ProjectTech";
+import ProjectDemo from "../section/ProjectDemo";
 
 function ProjectDetail(props) {
     const { id } = useParams()
@@ -43,8 +44,9 @@ function ProjectDetail(props) {
                     name={project.name}
                     headline={project.headline}
                 />
-                <ProjectDesc />
-                <ProjectTech />
+                <ProjectDesc desc={project.description} />
+                <ProjectTech tech={project.tech} />
+                <ProjectDemo repo={project.repo_url} />
             </div>
         )
     }

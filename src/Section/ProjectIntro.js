@@ -9,9 +9,6 @@ function ProjectIntro(props) {
                         font-poppins font-medium text-lg cursor-pointer
                         duration-100 hover:underline hover:underline-offset-8"
                     to='/'
-                    spy={true}
-                    smooth={true}
-                    duration={500}
                 >&larr; Homepage
                 </Link>
 
