@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { useLocation, useParams } from "react-router-dom"
 import React, { useEffect, useState } from "react"
 import { FetchProject } from "../data/Fetch";
 import ProjectIntro from "../section/ProjectIntro";
@@ -7,28 +7,23 @@ import ProjectTech from "../section/ProjectTech";
 import ProjectDemo from "../section/ProjectDemo";
 
 function ProjectDetail(props) {
+    const location = useLocation()
+    const {link} = location.state
+
     const { id } = useParams()
 
-    const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [project, setProject] = useState([]);
 
     useEffect(() => {
-        FetchProject(id).then(
+        FetchProject(id, link).then(
             (data) => {
                 setProject(data.result)
                 setIsLoaded(true)
-            },
-            (error) => {
-                setIsLoaded(true)
-                setError(error)
             }
         )
-    }, [id])
+    }, [id, link])
 
-    if (error) {
-        return <div>Error: {error.message}</div>
-    }
     if (!isLoaded) {
         return (
             <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 text-slate-800">

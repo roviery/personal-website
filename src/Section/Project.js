@@ -13,6 +13,7 @@ function Project(props) {
                     desc='A personal app to write down deadline tasks, to-do lists, and financial records.'
                     icon={<TbBrandKotlin className="absolute bottom-4 left-5 w-10 h-10" />}
                     id='a1f38fab-8ab8-4854-a7c8-754721683d7f'
+                    link='https://github.com/roviery/Catetin'
                 />
                 <Box
                     type='Android App'
@@ -20,6 +21,7 @@ function Project(props) {
                     desc='Movie Catalog App using TMDB API.'
                     icon={<TbBrandKotlin className="absolute bottom-4 left-5 w-10 h-10" />}
                     id='9c0f0aed-b00e-4df6-96e3-a89524974b75'
+                    link='https://github.com/roviery/Dicoding-MADE-Movlix'
                 />
                 <Box
                     type='Android App'
@@ -29,6 +31,7 @@ function Project(props) {
                         <TbBrandKotlin className="absolute bottom-4 left-5 w-10 h-10" />
                     }
                     id='680bba1f-32a9-498b-a027-eced51b19e9e'
+                    link='https://github.com/roviery/NewsApp'
                 />
                 <Box
                     type='API'
@@ -38,6 +41,7 @@ function Project(props) {
                         <FaNodeJs className="absolute bottom-4 left-5 w-10 h-10" />
                     }
                     id='d4a6177e-6530-4ca0-b7a5-01b54ae2a93c'
+                    link='https://github.com/roviery/Bookshelf-API'
                 />
             </div>
         </div>

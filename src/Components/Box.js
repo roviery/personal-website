@@ -8,9 +8,7 @@ function Box(props) {
                         hover:duration-300"
             to={`/project/${props.id}`}
             state={{
-                projectName: props.title,
-                type: props.type,
-                desc: props.desc,
+                link: props.link,
             }}
         >
             <h3 className="font-medium">{props.type}</h3>
