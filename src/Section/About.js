@@ -28,7 +28,7 @@ function About(props) {
                     <br />
                     <p>
                         I learned coding since early 2020 where I learned about HTML and CSS
-                        from Youtube and also python for basic programming. but I didn't spend
+                        from Youtube and also python for basic programming but I didn't spend
                         much time at that time because I had to prepare for the university
                         entrance exam. After I got into ITS, I learned C & C++ and got to know
                         about competitive programming.
