@@ -1,7 +1,7 @@
 import './index.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Home from './pages/Home';
-import ProjectDetail from './pages/ProjectDetail'
+import Home from './views/pages/Home';
+import ProjectDetail from './views/pages/ProjectDetail'
 import ScrollToTop from './utils/ScrollToTop';
 
 function App() {
